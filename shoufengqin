@@ -1,1 +1,73 @@
 
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  width: 650px;
+  height: 120px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+.container ul li{
+  float: left;
+  list-style: none;
+  position: relative;
+  width: 200px;
+  height: 120px;
+  overflow: hidden;
+}
+ul li .info{
+  color: #f6538d;
+  position: absolute;
+  font-weight: bold;
+  left: 10px;
+  top: 10px;
+}
+ul li .info .same{
+  color:#666;
+  font-size: 12px;
+}
+img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+}
+/*边框的虚线，重点之一，要掌握喔*/
+li .line{
+  position: absolute;
+  right: 0;
+  border: 1px dashed #eee;
+  width: 0;
+  height: 120px;
+}
+/*遮罩层*/
+li .mask{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 120px;
+  background-color: #000;
+  opacity: 0;
+}
+/*展开后发生变化的元素样式*/
+.container ul li.big{
+  width: 250px;
+  height: 120px;
+}
+li.big img{
+  width: 160px;
+  height: 120px;
+}
+li.big .info{
+  font-size: 18px;
+}
+.container:hover .mask{
+  opacity: 0.05;
+}
+.container ul li:hover .mask{
+  opacity: 0;
+}
